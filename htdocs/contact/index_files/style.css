@@ -1,0 +1,189 @@
+/*
+ * Angle - Style Switcher
+ */
+
+ /* Switcher */
+ #style-switcher {
+    position: fixed;
+    left: 0px;
+    top: 150px;
+    z-index: 9000;
+    width: 230px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+ }
+
+#style-switcher.active {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);§
+}
+.switcher-inner {
+    background: #495E73;
+    padding: 30px 20px;
+    color: #ffffff;
+ }
+#style-switcher.active .switcher-inner {
+    box-shadow: 4px 0px 0px rgba(0,0,0,.1);
+}
+#style-switcher h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    position: relative;
+}
+#style-switcher p {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 4px;
+    margin-bottom: 0;
+}
+#style-switcher h4:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    left: 50%;
+    margin-left: -15px;
+    bottom: 0;
+    background-color: #fff;
+}
+ /* Color list */
+.theme-colors {
+    margin: 0 0 12px;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+.theme-colors li {
+    display: inline-block;
+    cursor: pointer;
+}
+.theme-colors a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-indent: -9000px;
+    background-size: 100%;
+    background-color: transparent;
+}
+.theme-colors  .swatch-red-white {
+    background-image: url(../images/red-white.png);
+}
+.theme-colors  .swatch-green-white {
+    background-image: url(../images/green-white.png);
+}
+.theme-colors  .swatch-blue-white {
+    background-image: url(../images/blue-white.png);
+}
+.theme-colors  .swatch-black-beige {
+    background-image: url(../images/black-beige.png);
+}
+.theme-colors  .swatch-black-yellow {
+    background-image: url(../images/black-yellow.png);
+}
+ /* Switcher button */
+ .btn-switcher {
+    position: absolute;
+    width: 36px;
+    right: 36px;
+    left: 100%;
+    top: 50%;
+    margin-top: -18px;
+    background: #495E73;
+    padding: 20px;
+ }
+ #style-switcher.active  .btn-switcher {
+    box-shadow: 4px 0px 0px rgba(0,0,0,.1);
+}
+.btn-switcher:before {
+    content: "";
+    height: 10px;
+    width: 105%;
+    background: #495E73;
+    position: absolute;
+    top: -5px;
+    right: 1px;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ie-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+.btn-switcher:after {
+    content: "";
+    height: 10px;
+    width: 105%;
+    background: #495E73;
+    position: absolute;
+    bottom: -5px;
+    right: 1px;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ie-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+.btn-switcher i {
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+    vertical-align: middle;
+}
+.btn-switcher:hover i {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ie-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+ /* Theme layout */
+.theme-layout {
+    margin: 0 0 12px;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+.theme-layout li {
+    display: inline-block;
+    cursor: pointer;
+}
+.theme-layout a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-indent: -9000px;
+    background-size: 100%;
+    background-color: transparent;
+    margin: 0 15px;
+}
+.theme-layout .normal-layout {
+    background-image: url(../images/layout-full.png);
+}
+.theme-layout .boxed-layout {
+    background-image: url(../images/layout-boxed.png);
+}
+
+/* SVG decorations */
+.switcher-svg {
+    position: absolute;
+    fill: #495E73;
+}
+.switcher-svg.top {
+    top: 0;
+}
+.switcher-svg.bottom {
+    bottom: 0;
+}
+
